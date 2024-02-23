@@ -5,21 +5,6 @@ import nofCanaanLogoTransparent from "/public/temp.svg";
 const Home: React.FC = () => {
   return (
     <>
-      <main className={styles.main}>
-        <div className={styles.mainTitle}>
-          {" "}
-          {/* This div wraps the content you want to adjust */}
-          {/* TODO - ADD PADDING NEXT TO THE HEADER */}
-          <h1 className={styles.mainHeading}>
-            Unwind in Luxury: Discover Our Exquisite Hotel and Resort
-          </h1>
-          <button className={styles.menuButton}>
-            GET STARTED <i className="fas fa-chevron-right"></i>
-          </button>
-        </div>
-        <div className={styles.coordinate}>3.2028° N, 73.2207° E</div>
-      </main>
-
       <div className={styles.roomsContainer}>
         <div className={styles.description}>
           <h1 className={styles.main_title}>
@@ -32,7 +17,12 @@ const Home: React.FC = () => {
         <div className={styles.roomsCardsContainer}>
           {/* Suite */}
           <div className={styles.roomCard}>
-            <img src="suiteLivingRoom.jpg" alt="Suite" />
+            <Image
+              src="/suiteLivingRoom.jpg"
+              alt="Suite"
+              width={150}
+              height={150}
+            />
             <h2>The Suite</h2>
             <p>
               An 89m heated infinity pool with breathtaking views over the
@@ -42,7 +32,12 @@ const Home: React.FC = () => {
           </div>
           {/* panoramic room 1 */}
           <div className={styles.roomCard}>
-            <img src="panoramicRoomView.jpg" alt="panoramic room 1" />
+            <Image
+              src="/panoramicRoomView.jpg"
+              alt="panoramic room 1"
+              width={150}
+              height={150}
+            />
             <h2>Panoramic Room</h2>
             <p>
               An 89m heated infinity pool with breathtaking views over the
@@ -53,7 +48,12 @@ const Home: React.FC = () => {
 
           {/* panoramic room 2 */}
           <div className={styles.roomCard}>
-            <img src="panoramicBalcony.jpg" alt="panoramic room 2" />
+            <Image
+              src="/panoramicBalcony.jpg"
+              alt="panoramic room 2"
+              width={150}
+              height={150}
+            />
             <h2>Western Room</h2>
             <p>
               An 89m heated infinity pool with breathtaking views over the
@@ -67,13 +67,23 @@ const Home: React.FC = () => {
       {/* outdoor activities */}
       <div className={styles.outdoorContainer}>
         <div className={styles.outdoorActivity}>
-          <img src="IMG-20240209-WA0091.jpg" alt="outdoorPool" />
+          <Image
+            src="/IMG-20240209-WA0091.jpg"
+            alt="outdoorPool"
+            width={150}
+            height={150}
+          />
         </div>
         <div className={styles.outdoorActivity}>
-          <img src="8920326.jpg" alt="public pool" />
+          <Image
+            src="/8920326.jpg"
+            alt="public pool"
+            width={150}
+            height={150}
+          />
         </div>
         <div className={styles.outdoorActivity}>
-          <img src="tamarPool1.jpg" alt="spring" />
+          <Image src="/tamarPool1.jpg" alt="spring" width={150} height={150} />
         </div>
       </div>
 

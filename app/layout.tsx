@@ -7,7 +7,7 @@ import Image from "next/image";
 import nofCanaanLogoTransparent from "/public/temp.svg";
 
 import styles from "./layout.module.css";
-import BackgroundSlideshow from "@/components/backgroundSlideshow";
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,45 +24,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${styles.body}`}>
-        #TODO - as background
-        {/* <BackgroundSlideshow /> */}
-        <Head>
-          <title>Royal Palace Hotel and Resort</title>
-        </Head>
-        <header className={styles.header}>
-          <button className={styles.menuButton}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 9h16.5m-16.5 6.75h16.5"
-              />
-            </svg>
-            MENU
-          </button>
-          <div className={styles.logoContainer}>
-            <Image
-              src={nofCanaanLogoTransparent}
-              alt="Nof Canaan Logo"
-              width={150}
-              height={150}
-            />
-          </div>
-          <button className={styles.menuButton}>RESERVE NOW</button>
-        </header>
+        <Header />
         {children}
         {/* TODO blue footer */}
         <div className={styles.footer}>
           {/* google maps */}
           <div className={styles.googleMaps}>
-            <img src="map.PNG" alt="google maps location" />
+            <Image
+              width={800}
+              height={500}
+              src="/map.PNG"
+              alt="google maps location"
+            />
           </div>
 
           {/* contact */}

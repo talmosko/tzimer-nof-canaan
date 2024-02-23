@@ -18,23 +18,3 @@
   padding: 20px;
   align-items: center;
 }
-/* TODO - create a global component */
-.menuButton {
-  border: 3px solid white;
-  padding: 10px 20px;
-  font-size: 0.95rem;
-  letter-spacing: 0.05em;
-  color: white;
-  cursor: pointer;
-  background: transparent;
-  border-radius: 0.375rem;
-  display: flex;
-  align-items: center; /* Vertically center flex items */
-  justify-content: center; /* Horizontally center flex items */
-  gap: 8px; /* Adjust the space between the icon and the text */
-}
-.menuButton svg {
-  flex-shrink: 0; /* Prevent the SVG from shrinking */
-  width: 24px; /* Set a specific width */
-  height: 40px; /* Set a specific height */
-}
