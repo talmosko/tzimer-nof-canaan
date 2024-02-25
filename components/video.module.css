@@ -1,0 +1,20 @@
+.videoSection {
+  position: relative;
+  margin-top: 20%;
+  padding-bottom: 45%; /* Maintain aspect ratio */
+  width: 100%; /* Use full width to center content */
+  height: 0;
+  overflow: hidden;
+  display: flex; /* Using flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.videoSection iframe {
+  position: absolute;
+  top: 0;
+  left: 50%; /* Set left to 50% of the parent */
+  transform: translateX(-50%); /* Pull back iframe to the center */
+  width: 800px; /* Width of the iframe */
+  height: 400px; /* Height of the iframe, maintain aspect ratio */
+}
