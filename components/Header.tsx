@@ -6,12 +6,13 @@ import Image from "next/image";
 import Head from "next/head";
 
 import nofCanaanLogoTransparent from "/public/temp.svg";
+import Link from "next/link";
 
 const imagePaths = [
   "/backg.jpg",
-  "/background.jpg",
   "/panoramicRoomView.jpg",
-  // Add more images as needed
+  "/IMG-20240209-WA0087.jpg",
+  "/IMG-20240209-WA0089.jpg",
 ];
 
 export default function Header() {
@@ -20,7 +21,7 @@ export default function Header() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imagePaths.length);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(timer);
   }, []);
@@ -59,7 +60,9 @@ export default function Header() {
               height={150}
             />
           </div>
-          <button className={styles.menuButton}>RESERVE NOW</button>
+          <Link href="https://www.booking.com/searchresults.he.html?aid=318615&label=Hebrew_Israel_HE_IL_29562091225-P2ZgyYwfHvP_1cUgTwurGAS217274481245%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi55168806993%3Atidsa-321568232789%3Alp2376%3Ali%3Adec%3Adm&gclid=Cj0KCQiA5-uuBhDzARIsAAa21T9vXNNea3oam-bdqKYBG0k-NwK6ryqJ7fpxlXaZYJPUoDSBxjMbIOAaAlAJEALw_wcB&highlighted_hotels=325574&redirected=1&city=900049179&hlrd=no_dates&source=hotel&expand_sb=1&keep_landing=1&sid=c6f9a76c51f8fc0fc3e06022cc2384dd?">
+            <button className={styles.menuButton}>RESERVE NOW</button>
+          </Link>
         </div>
         <main className={styles.main}>
           <div className={styles.mainTitle}>

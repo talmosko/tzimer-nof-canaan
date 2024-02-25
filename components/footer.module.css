@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  height: 80%;
+  width: 100%;
+  background-color: #51aeca;
+  padding: 20px;
+}
+
+.contactInfo {
+  color: rgb(248 250 252);
+}
+
+.address {
+  color: rgb(248 250 252);
+}

@@ -8,6 +8,7 @@ import nofCanaanLogoTransparent from "/public/temp.svg";
 
 import styles from "./layout.module.css";
 import Header from "@/components/Header";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,40 +19,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: {
   children: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className={`${inter.className} ${styles.body}`}>
         <Header />
         {children}
-        {/* TODO blue footer */}
-        <div className={styles.footer}>
-          {/* google maps */}
-          <div className={styles.googleMaps}>
-            <Image
-              width={800}
-              height={500}
-              src="/map.PNG"
-              alt="google maps location"
-            />
-          </div>
-
-          {/* contact */}
-          <div>
-            <h3> Contact & Reservation</h3>
-            <p>canaani@netvision.net.il</p>
-            <p>054 - 4622258</p>
-          </div>
-
-          {/* address */}
-          <div>
-            <h3> Address </h3>
-            <p>25 Nahal Ashalim , Kfar Adumim, 90618,</p>
-            <p>054 - 4622258</p>
-          </div>
-        </div>
+        {modal}
+        <div id="modal-root" />
+        <Footer />
       </body>
     </html>
   );
